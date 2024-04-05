@@ -1,0 +1,52 @@
+Get http://localhost:3001/users?q=
+###
+POST http://localhost:3001/users
+Content-Type: application/json
+
+{
+  "first_name": "john",
+  "last_name": "doe",
+  "username": "johno",
+  "password": "1234",
+  "email":"johndoe1234@gmail.com"
+}
+###
+GET http://localhost:3001/users/is_admin
+Content-Type: application/json
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjVkOGIxYWFjMjM3ZWY1YjU2MDExZWJlIn0sImlhdCI6MTcwODcwMDk5MH0.YOGOYFLM2BjxCrGaTIxcjWpVuXJCEMcSGVr9f_uhP1I
+
+{
+  
+}
+###
+POST http://localhost:3001/users/verify
+Content-Type: application/json
+
+{
+  "email":"johndoe12345@gmail.com",
+  "password":"516489"
+}
+###
+POST http://localhost:3001/users/forgot1
+Content-Type: application/json
+
+{
+  "email":"johndoe123456@gmail.com"
+}
+###
+POST http://localhost:3001/users/forgot2
+Content-Type: application/json
+
+{
+  "email":"johndoe123456@gmail.com",
+  "password":"1234",
+  "emailpassword":"247137"
+}
+###
+POST http://localhost:3001/users/login
+Content-Type: application/json
+
+{
+  "username": "johndoe12345@gmail.com",
+  "password": "1234"
+}

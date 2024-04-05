@@ -1,0 +1,169 @@
+body {
+  background-color: #d8d8d8;
+}
+
+.App {
+  flex-wrap: nowrap;
+  height: 100vh;
+  box-sizing: border-box;
+  overflow-x: hidden;
+  
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #6aad7a;
+  padding: 5px;
+  margin: 10px;
+}
+
+.header-nav ul {
+  display: flex;
+  list-style: none;
+}
+
+.header-nav ul li {
+  padding-right: 40px;
+
+}
+
+.Nav {
+  background-color: #f7fbda;
+  width: 300px;
+  height: 92vh;
+  padding: 15px;
+  margin: 10px;
+  
+}
+
+.Nav select,
+.Nav input,
+.Nav button {
+  display: block;
+  width: 200px;
+  height: 30px;
+  border-radius: 5px;
+}
+
+.main {
+  width: 100%;
+  background-color: #ecf0e3;
+  margin: 20px;
+  padding: 30px;
+  
+  overflow: auto;
+  height: 100%;
+}
+
+.headMain {
+  display: flex;
+  align-items: center;
+  background-color: #d8d8d8;
+  padding: 10px;
+}
+
+.mainMain {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  margin-bottom: 80px;
+}
+
+.mainlayout {
+  display: flex;
+  height: 86vh;
+  padding: 10px;
+}
+
+.mainelem {
+  background-color: #d8d8d8;
+  min-width: 300px;
+  max-width: 350px;
+  padding: 10px;
+  margin-top: 30px;
+  border-radius: 10px;
+}
+.head-ul{
+  display: flex;
+  align-items: center;
+}
+.addelemLink {
+  margin-top: 30px;
+  padding-left: 20px;
+  font-size: 30px;
+  background: radial-gradient(128.88% 128.88% at 103.9% -10.39%, #E84D70 0%, #A337F6 53.09%, #28A7ED 100%);
+  color: azure;
+  width: 300px;
+  height: 150px;
+  border-radius: 10px;
+  display: flex;
+  padding-top: 40px;
+}
+
+.elemImage {
+  max-width: 300px;
+  border-radius: 10px;
+}
+
+a {
+  text-decoration: none;
+
+}
+
+.addFed {
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+  align-items: center;
+}
+
+.nomsiz {
+  text-align: start;
+  width: 400px;
+  background-color: #b6ddbf;
+  position: relative;
+  padding: 40px 20px 80px 20px;
+  
+}
+
+.nomsiz input,
+.nomsiz select,
+.nomsiz button {
+  width: 350px;
+  height: 30px;
+  display: block;
+  margin: 10px auto;
+}
+
+.nomsiz label {
+  tab-size: 20px;
+  color: #186a2b;
+  position: relative;
+  left: 30px;
+
+}
+
+.nomsiz h1 {
+  margin-left: 20px;
+}
+
+.nomsizbutton {
+  margin-top: 20px;
+  position: relative;
+  top: 10px;
+}
+
+.activbtnmain {
+  background: #9a9d9f;
+}
+
+.mainHeadInput {
+  height: 40px;
+  width: 450px;
+}
+
+.btnhead {
+  width: 400px;
+}

@@ -1,0 +1,47 @@
+###
+POST http://localhost:3001/status
+Content-Type: application/json
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjVkOGIxYWFjMjM3ZWY1YjU2MDExZWJlIn0sImlhdCI6MTcwODcwMDk5MH0.YOGOYFLM2BjxCrGaTIxcjWpVuXJCEMcSGVr9f_uhP1I
+
+{
+  "name":"simple",
+  "price":12,
+  "ads_pay":4,
+  "how_many_ads":3
+}
+###
+GET  http://localhost:3001/status
+Content-Type: application/json
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjVkOGIxYWFjMjM3ZWY1YjU2MDExZWJlIn0sImlhdCI6MTcwODcwMDk5MH0.YOGOYFLM2BjxCrGaTIxcjWpVuXJCEMcSGVr9f_uhP1I
+
+{
+  "name":"simple",
+  "price":12,
+  "ads_pay":4,
+  "how_many_ads":3
+}
+
+###
+GET  http://localhost:3001/status/65d8c06d50d7356993fe843f
+Content-Type: application/json
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjVkOGIxYWFjMjM3ZWY1YjU2MDExZWJlIn0sImlhdCI6MTcwODcwMDk5MH0.YOGOYFLM2BjxCrGaTIxcjWpVuXJCEMcSGVr9f_uhP1I
+
+{
+  "name":"simple",
+  "price":12,
+  "ads_pay":4,
+  "how_many_ads":3
+}
+
+
+###
+PUT http://localhost:3001/status/65d8c07450d7356993fe8442
+Content-Type: application/json
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjVkOGIxYWFjMjM3ZWY1YjU2MDExZWJlIn0sImlhdCI6MTcwODcwMDk5MH0.YOGOYFLM2BjxCrGaTIxcjWpVuXJCEMcSGVr9f_uhP1I
+
+{
+  "name":"simple",
+  "price":12,
+  "ads_pay":4,
+  "how_many_ads":3
+}
