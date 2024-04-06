@@ -83,7 +83,7 @@ const Admin = () => {
         const data = new FormData(event.currentTarget);
         console.log(personName)
         axios
-            .get(`http://localhost:3001/status/connect/${personName}/${row.id}`, {
+            .get(`${process.env.REACT_APP_URL}/status/connect/${personName}/${row.id}`, {
                 headers: { Authorization: localStorage.getItem("token") },
             })
             .then((response) => {

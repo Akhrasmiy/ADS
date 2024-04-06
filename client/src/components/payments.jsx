@@ -29,7 +29,7 @@ const Payments = () => {
 
     useEffect(() => {
         axios
-            .get(`http://localhost:3001/users/me`, {
+            .get(`${process.env.REACT_APP_URL}/users/me`, {
                 headers: { Authorization: localStorage.getItem('token') },
             })
             .then((response) => {

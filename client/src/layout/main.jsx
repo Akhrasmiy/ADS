@@ -27,7 +27,7 @@ const Main = () => {
 
   useEffect(() => {
     axios
-      .get(`http://localhost:3001/users/me`, {
+      .get(`${process.env.REACT_APP_URL}/users/me`, {
         headers: { Authorization: localStorage.getItem('token') },
       })
       .then((response) => {
@@ -45,7 +45,7 @@ const Main = () => {
 
     fetchData();
     axios
-      .get(`http://localhost:3001/status`, {
+      .get(`${process.env.REACT_APP_URL}/status`, {
         headers: { Authorization: localStorage.getItem('token') },
       })
       .then((response) => {
