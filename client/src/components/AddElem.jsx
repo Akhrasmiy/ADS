@@ -15,11 +15,19 @@ import ListItemText from '@mui/material/ListItemText';
 import Collapse from '@mui/material/Collapse';
 import WorkspacePremiumIcon from '@mui/icons-material/WorkspacePremium';
 import ExpandLess from '@mui/icons-material/ExpandLess';
-import ExpandMore from '@mui/icons-material/ExpandMore';
 import PermIdentityIcon from '@mui/icons-material/PermIdentity';
 import PriceCheckIcon from '@mui/icons-material/PriceCheck';
 import CreditCardIcon from '@mui/icons-material/CreditCard';
+import ExpandMore from '@mui/icons-material/KeyboardArrowRightRounded';
+import PersonIcon from '@mui/icons-material/Person';
+import QuestionAnswerOutlinedIcon from '@mui/icons-material/QuestionAnswerOutlined';
+import CreditScoreIcon from '@mui/icons-material/CreditScore';
+import ShareIcon from '@mui/icons-material/Share';
+// import ExpandMore from '@mui/icons-material/ArrowForwardIosRounded';
 import ContentCopyIcon from '@mui/icons-material/ContentCopy';
+import TelegramIcon from '@mui/icons-material/Telegram';
+import InfoOutlinedIcon from '@mui/icons-material/InfoOutlined';
+import LogoutIcon from '@mui/icons-material/Logout';
 import { Box, CardContent, FormControl, FormGroup, Grid, TextField, Typography } from '@mui/material';
 const { Option } = Select;
 const Addelem = () => {
@@ -28,14 +36,14 @@ const Addelem = () => {
 
     useEffect(() => {
         axios
-            .get(`${process.env.REACT_APP_URL}/users/me`, {
+            .get(`http://localhost:3001/users/me`, {
                 headers: { Authorization: localStorage.getItem('token') },
             })
             .then((response) => {
                 setuserinfo(response.data.data)
             })
         axios
-            .get(`${process.env.REACT_APP_URL}/status`, {
+            .get(`http://localhost:3001/status`, {
                 headers: { Authorization: localStorage.getItem('token') },
             })
             .then((response) => {
@@ -116,12 +124,12 @@ const Addelem = () => {
         <Header/>
             <div style={{ display: 'flex', justifyContent: "center", alignItems: "center", }}>
                 <List
-                    sx={{ width: '100%', bgcolor: 'background.paper' }}
+                    sx={{ width: '100%', height:"85vh", bgcolor: 'background.paper' }}
                     component="nav"
                     aria-labelledby="nested-list-subheader"
                     subheader={
                         <ListSubheader component="div" id="nested-list-subheader">
-                            profile
+                            
                         </ListSubheader>
                     }
                 >
@@ -130,7 +138,7 @@ const Addelem = () => {
                         handleClick(1)
                     }}>
                         <ListItemIcon>
-                            <PermIdentityIcon />
+                            <PersonIcon />
                         </ListItemIcon>
                         <ListItemText primary="shaxsiy ma'lumotlaringiz" />
                         {open1 ? <ExpandLess /> : <ExpandMore />}
@@ -155,7 +163,7 @@ const Addelem = () => {
                         handleClick(2)
                     }}>
                         <ListItemIcon>
-                            <PriceCheckIcon />
+                            <CreditScoreIcon />
                         </ListItemIcon>
                         <ListItemText primary="hisobni to'ldirish" />
                         {open2 ? <ExpandLess /> : <ExpandMore />}
@@ -201,7 +209,7 @@ const Addelem = () => {
                         <ListItemIcon>
                             <CreditCardIcon />
                         </ListItemIcon>
-                        <ListItemText primary="pul yichish" />
+                        <ListItemText primary="pul yechish" />
                         {open3 ? <ExpandLess /> : <ExpandMore />}
                     </ListItemButton>
                     <Collapse in={open3} timeout="auto" unmountOnExit>
@@ -245,10 +253,38 @@ const Addelem = () => {
                         </List>
                     </Collapse>
                     <ListItemButton onClick={() => {
-                        handleClick(5)
+                        window.open("https://t.me/pulbor_admin");
+                    }}>
+                        <ListItemIcon>
+                            <QuestionAnswerOutlinedIcon />
+                        </ListItemIcon>
+                        <ListItemText primary="FAQ" />
+                        <ExpandMore />
+                    </ListItemButton>
+                    <ListItemButton onClick={() => {
+                        window.open("https://t.me/guruh_pulbor");
                     }}>
                         <ListItemIcon>
                             <GroupAddIcon />
+                        </ListItemIcon>
+                        <ListItemText primary="Group" />
+                     <ExpandMore />
+                    </ListItemButton>
+                    <ListItemButton onClick={() => {
+                        window.open("https://t.me/sayt_pulbor");
+                    }}>
+                        <ListItemIcon>
+                            <TelegramIcon />
+                        </ListItemIcon>
+                        <ListItemText primary="Official Channel" />
+                     <ExpandMore />
+                    </ListItemButton>
+
+                    <ListItemButton onClick={() => {
+                        handleClick(5)
+                    }}>
+                        <ListItemIcon>
+                            <ShareIcon />
                         </ListItemIcon>
                         <ListItemText primary="do'stimni taklif qilish" />
                         {open5 ? <ExpandLess /> : <ExpandMore />}
@@ -317,6 +353,17 @@ const Addelem = () => {
                             }
                         </List>
                     </Collapse>
+
+                    <ListItemButton onClick={() => {
+                        localStorage.removeItem("token")
+                        window.location.reload()
+                    }}>
+                        <ListItemIcon>
+                            <LogoutIcon />
+                        </ListItemIcon>
+                        <ListItemText primary="logout" />
+                     <ExpandMore />
+                    </ListItemButton>
                 </List></div>
         </>);
 }
