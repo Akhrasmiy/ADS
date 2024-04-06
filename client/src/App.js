@@ -22,7 +22,7 @@ function App() {
 
   useEffect(() => {
     axios
-      .get(`http://localhost:3001/users/is_admin`, {
+      .get(`${process.env.REACT_APP_URL}/users/is_admin`, {
         headers: { Authorization: token },
       })
       .then((response) => {
