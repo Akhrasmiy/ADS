@@ -215,7 +215,7 @@ const Main = () => {
         {!errors ? (
           <Card raised={true}>
             <CardHeader title={`reklama ${userinfo.ads_number} / ${userinfo.status_ads}`} />
-            <CardActionArea>
+            <CardActionArea onClick={handleVideoClick}>
               <CardContent
                 component='text'
                 values={`name ${adData?.name}`}
@@ -227,7 +227,7 @@ const Main = () => {
                 onClick={handleVideoClick}
                 src={`${process.env.REACT_APP_URL}/ads/video/${adData?._id}`}
               />
-              <Link onClick={handleVideoClick} style={{ fontSize: "20px" }} target='_blank' href={`${adData?.link}`}>link</Link>
+              <Link onClick={handleVideoClick} style={{ fontSize: "20px" }} target='_blank' href={`${adData?.link}`}>ko'rish</Link>
 
             </CardActionArea>
           </Card>
